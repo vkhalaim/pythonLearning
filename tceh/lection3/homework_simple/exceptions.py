@@ -8,12 +8,11 @@
 #     raise ValueError('Is even!')
 #
 
-l = [1, 2, 3, 4, 5, 6, 7, 8]
+list_ = [1, 2, 3, 4, 5, 6, 7, 8]
 
 inp = int(input('Which index do you want?'))
 
 try:
-    print(l[inp])
+    print(list_[inp])
 except IndexError:
     print('Out of boundary!')
-

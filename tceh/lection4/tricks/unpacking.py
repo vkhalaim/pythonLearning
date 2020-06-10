@@ -10,4 +10,3 @@ print(first, second)
 
 first, *mid, last = 'some letters'
 print(first, mid, last)
-

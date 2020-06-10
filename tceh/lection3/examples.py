@@ -7,14 +7,16 @@ def this_functions_prints_stars():
     print('I will print stars!')
     print('**********')
 
+
 # Here we call the function:
 this_functions_prints_stars()
 
 
 # Step 1:
 def my_function(input_var1, input_var2):
-    print(input_var1, input_var2)  
+    print(input_var1, input_var2)
     return input_var1 + input_var2
+
 
 first_call = my_function(1, 1)
 print(first_call)
@@ -27,8 +29,9 @@ print(second_call)
 def my_function(var1, var2, var3):
     print("No way I'm using this: {}, {}, {}".format(var1, var2, var3))
 
+
 # my_function now is redefined to accept 3 arguments:
-new_call = my_function((1,2,3,4), input('var2'), input('var3'))
+new_call = my_function((1, 2, 3, 4), input('var2'), input('var3'))
 print(new_call)
 
 
@@ -40,6 +43,7 @@ def function_with_default_value(name, age=0, needs_stars=False):
     if needs_stars:
         print('*****')
 
+
 function_with_default_value('Nikita')
 function_with_default_value('Alex', age=19)
 function_with_default_value('Bob', age=40, needs_stars=True)
@@ -49,12 +53,13 @@ function_with_default_value('Bob', age=40, needs_stars=True)
 def named_values(name=None, surname=None, patronimic=None):
     print('Full name: {} {} {}'.format(surname, name, patronimic))
 
+
 named_values(name='Nikita', surname='Sobolev', patronimic='Andreevich')
 named_values(surname='Petrov', patronimic='Ivanovich', name='Ivan')
 named_values(surname='Semenov', name='Petr', patronimic='Ivanovich')
 
 
-## Complex examples
+# Complex examples
 
 # Complex step 1:
 def sum_all(*args):
@@ -65,7 +70,9 @@ def sum_all(*args):
         result += arg
     return result
 
+
 print(sum_all(1, 2, 3, 4, 5))
+
 
 # Complex step 2:
 def factorial(n):  # This function is recursive, it calls itself.
@@ -73,12 +80,14 @@ def factorial(n):  # This function is recursive, it calls itself.
         return 1
     return n * factorial(n - 1)
 
+
 print(factorial(4))  # 4 * 3 * 2 * 1 = 24
 
 
 # Complex step 3:
 def do_callback(function, argument):  # you can pass functions as an arguments
     return function(argument)  # this is called "callback"
+
 
 result = do_callback(len, 'string')
 print(result)
@@ -91,6 +100,7 @@ def all_together(value, *args, **kwargs):
         print(message)
     else:
         print('value is not bigger than sum(args)')
+
 
 all_together(1, 0)
 all_together(1, 2, 3, 4)
@@ -108,6 +118,7 @@ def enclosing(value):
     _inner()
     return new_value
 
+
 enclosing(25)
 
 
@@ -118,6 +129,7 @@ def decorator(function):
 
     print('called')
     return _inner
+
 
 decorated = decorator(len)
 decorated([1, 2, 3])

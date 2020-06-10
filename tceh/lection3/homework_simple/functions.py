@@ -21,11 +21,11 @@ print(func2(111, 22, 3))
 print(func2(12, -2, 3))
 
 
-def func3(l, flag):
+def func3(list_, flag):
     if flag:
-        return [num for num in l if num % 2 != 0]
+        return [num for num in list_ if num % 2 != 0]
 
-    return [num for num in l if num % 2 == 0]
+    return [num for num in list_ if num % 2 == 0]
 
 
 print(func3([1, 2, 3, 4], True))
@@ -34,7 +34,6 @@ print(func3([1, 2, 3, 4], False))
 
 def func4(*args, glue=':'):
     return glue.join([elem for elem in args if len(elem) > 3])
-
 
 
 print(func4("dasfs", "aaa22", glue="*"))

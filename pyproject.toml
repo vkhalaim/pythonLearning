@@ -7,10 +7,10 @@ authors = ["vkhalaim <vasyl.khalaim@ukr.net>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 pytest = "^5.4.3"
+flake8 = "^3.8.3"
 
-packages = [
-    { include = "tceh" },
-  ]
+[tool.poetry.scripts]
+guess_nuber='tceh/lection4/guess_number.game:main'
 
 [tool.poetry.dev-dependencies]
 

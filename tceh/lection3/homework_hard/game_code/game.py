@@ -7,7 +7,7 @@ from random import choice
 # Empty tile, there's only one empty cell on a field:
 EMPTY_MARK = 'x'
 INITIAL_FIELD = [i for i in range(1, 16)] + [EMPTY_MARK]
-# Dictionary of possible moves if a form of: 
+# Dictionary of possible moves if a form of:
 # key -> delta to move the empty tile on a field.
 MOVES = {
     'w': -4,
@@ -67,9 +67,11 @@ def perform_move(field, key):
 
     if 0 <= empty + MOVES[key] <= 15:
         if key in ['w', 's']:
-            field[empty], field[empty + MOVES[key]] = field[empty + MOVES[key]], field[empty]
+            field[empty], field[empty + MOVES[key]] = \
+                field[empty + MOVES[key]], field[empty]
         elif key in ['a', 'd'] and 0 <= (empty % 4) + MOVES[key] <= 3:
-            field[empty], field[empty + MOVES[key]] = field[empty + MOVES[key]], field[empty]
+            field[empty], field[empty + MOVES[key]] = \
+                field[empty + MOVES[key]], field[empty]
         else:
             raise IndexError
         return field
@@ -80,9 +82,9 @@ def perform_move(field, key):
 def handle_user_input():
     """
     Handles user input. List of accepted moves:
-        'w' - up, 
+        'w' - up,
         's' - down,
-        'a' - left, 
+        'a' - left,
         'd' - right
     :return: <str> current move.
     """

@@ -1,15 +1,21 @@
+import sys
 # Recursion:
 
+
 # Run this in pythontutor.com
-def factorial(n):  # This function is recursive, it calls itself (but this is VERY-VERY-VERY-VERY STUPID EXAMPLE).
+# This function is recursive, it calls itself
+# (but this is VERY-VERY-VERY-VERY STUPID EXAMPLE).
+def factorial(n):
     if n == 0:
         return 1
     return n * factorial(n - 1)
 
+
 print(factorial(4))  # 4 * 3 * 2 * 1 = 24
 
 print(factorial(4000))  # OOOPS (((
-import sys
+
+
 sys.getrecursionlimit()
 
 
@@ -32,13 +38,13 @@ def double_all_elements(lst):
 
 # Convert to tail recursion
 
-def double_all_elements(lst, result_lst=None):
+def double_all_elements(lst, result_lst=None):  # noqa F811
     """ Double all elements in list (tail recursion example)
     :param lst: incoming list
     :return: result list
     """
 
-    if result_lst == None:
+    if result_lst is None:
         result_lst = []
 
     if len(lst) == 0:
@@ -53,13 +59,13 @@ def double_all_elements(lst, result_lst=None):
 
 
 # Convert recursion to loop
-def double_all_elements(lst, result_lst=None):
+def double_all_elements(lst, result_lst=None):  # noqa F811
     """  Double all elements in list (without recursion)
     :param lst: incoming list
     :return: result list
     """
 
-    if result_lst == None:
+    if result_lst is None:
         result_lst = []
 
     while len(lst) > 0:
@@ -71,9 +77,10 @@ def double_all_elements(lst, result_lst=None):
 
 def print_all_list_items(data):
     if not data:
-        return 
+        return
     item = data.pop()
     print(item)
     return print_all_list_items(data)
+
 
 print_all_list_items(['1', '2', 'end'])

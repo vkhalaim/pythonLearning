@@ -7,7 +7,6 @@ def my_function():
 
 print('Functions are objects', isinstance(my_function, object))
 
-
 # You can use variables to store functions
 
 test = my_function
@@ -24,7 +23,6 @@ def call_passed_function(incoming):
 
 call_passed_function(my_function)
 
-
 # You can not call uncallable things:
 
 try:
@@ -32,7 +30,6 @@ try:
     d()
 except TypeError as e:
     print('It is not a function', e)
-
 
 # You can check if something could be called
 
@@ -43,6 +40,7 @@ print(callable(len), callable(45), callable(callable))
 
 def return_min_function():
     return min
+
 
 test = return_min_function()
 min_value = test(4, 5, -9, 12)

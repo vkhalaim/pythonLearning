@@ -9,7 +9,7 @@ import contextlib
 from pip._vendor.distlib.compat import raw_input
 
 from .game_code import game
-from .game_code.game import  (
+from .game_code.game import (
     shuffle_field,
     is_game_finished,
     handle_user_input,
@@ -44,18 +44,18 @@ class BaseTestClass(object):
         fails = self.__class__.fails
         all_tests = fails + self.__class__.passed
         print("Finished class' tests: {}/{}".format(
-                (all_tests - fails), all_tests))
+            (all_tests - fails), all_tests))
         print()
 
     def _assert_compare(self, first, second, equality=True):
         if (first == second) != equality:
             message = 'does not equal' if equality else 'equals'
             raise AssertionTestException('{}.{}: {} {} {}'.format(
-                    self.__class__.__name__,
-                    inspect.stack()[1][3],
-                    first,
-                    message,
-                    second,
+                self.__class__.__name__,
+                inspect.stack()[1][3],
+                first,
+                message,
+                second,
             ))
 
     def assert_equal(self, first, second):
@@ -69,9 +69,9 @@ class BaseTestClass(object):
         try:
             yield
             raise AssertionTestException('{}.{}: does not rise {}'.format(
-                    self.__class__.__name__,
-                    inspect.stack()[1][3],
-                    exception,
+                self.__class__.__name__,
+                inspect.stack()[1][3],
+                exception,
             ))
         except exception:
             pass

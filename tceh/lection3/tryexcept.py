@@ -6,12 +6,12 @@
 
 try:
     print(1 / 0)
-except:
+except Exception:
     print('0!!')
 
 try:
     print(1 / 0)
-except Exception:  # it is almost the same as just `except:`
+except ZeroDivisionError:  # it is almost the same as just `except:`
     print('0!!')
 
 # Catching specific exceptions
@@ -96,7 +96,9 @@ try:
 finally:
     print('Finally!')
 
-di = {'Please, input what is the name of the first President of Russia?': ('Boris', 'Elcin', 'Boris Elcin'),
+di = {'Please, input what is the name of'
+      ' the first President of Russia?': ('Boris', 'Elcin', 'Boris Elcin'),
       'Please, input how many 5 * 5?': ('25', 'twenty five', 'TWENTY FIVE'),
-      'Please, input what is the main street in Moscow?': ('Tverskaia', 'Tverskaya', 'TVERSKAIA'),
+      'Please, input what is'
+      ' the main street in Moscow?': ('Tverskaia', 'Tverskaya', 'TVERSKAIA'),
       }

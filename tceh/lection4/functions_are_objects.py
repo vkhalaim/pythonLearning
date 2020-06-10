@@ -52,6 +52,7 @@ print(callable(len), callable(45), callable(callable))
 def return_min_function():
     return min
 
+
 test = return_min_function()
 min_value = test(4, 5, -9, 12)
 print('Min values is', min_value)
