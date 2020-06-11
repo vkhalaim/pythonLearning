@@ -52,7 +52,9 @@ def main():
     while not is_game_finished(masked_word, guessed_word):
         guess = handle_user_input()
 
-        masked_word, tries = check_guess(guessed_word, masked_word, guess, tries)
+        masked_word, tries = check_guess(
+            guessed_word, masked_word, guess, tries
+        )
 
         print_masked_word(masked_word)
         print('Tries remaining: ', tries)
