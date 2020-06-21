@@ -37,7 +37,7 @@ class DictFunctionality(object):
 
 
 if __name__ == '__main__':
-    l = DictFunctionality({'1key': 'some_value'})
+    l = DictFunctionality({'1key': 'some_value'}) # noqa E741
     l[1] = 'item1'
     print(str(l), l[1])
 

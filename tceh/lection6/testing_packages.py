@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 
 
-
-from normal_package.normal_file import MyClass, my_function, GLOBAL_VAR, special_function
+from normal_package.normal_file import MyClass, my_function, GLOBAL_VAR, special_function # noqa F401
 from normal_package.__main__ import special_function as m_special_function
-#from normal_package import __main__
+
+# from normal_package import __main__
 
 
 my_function()
 m_special_function()
-
 
 print("__name__ in testing_package.py", __name__)
 
@@ -21,6 +20,3 @@ try:
     print_info()
 except ImportError as e:
     print(e)
-
-
-

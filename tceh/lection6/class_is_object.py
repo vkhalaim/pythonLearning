@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-
 # You can get type of an instance
 
 
@@ -15,10 +14,10 @@ print("But what is inst_type's type?", type(inst_type))
 class Test(object):
     pass
 
+
 t = Test()
 
 print(t.__class__)
-
 
 # Simple example
 

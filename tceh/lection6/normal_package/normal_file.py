@@ -12,11 +12,12 @@ def my_function():
 def special_function():
     print('Another special function')
 
+
 def run_only_if_im_entry_point():
     print('JJJ')
 
-GLOBAL_VAR = 12
 
+GLOBAL_VAR = 12
 
 
 print('__name__ is ', __name__)
