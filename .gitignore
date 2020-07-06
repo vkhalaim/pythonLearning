@@ -1,0 +1,5 @@
+**/.idea/
+tceh/lection3/homework_hard/.pytest_cache
+.venv
+*.pyc
+*.pyo

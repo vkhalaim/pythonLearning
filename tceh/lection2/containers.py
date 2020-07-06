@@ -1,11 +1,15 @@
-import collections 
-listWithDuplicates = ["red", "green", "blue", "yellow", "blue", "blue", "blue", "yellow", "yellow"]
+import collections
 
-# counter tool 
+listWithDuplicates = [
+    "red", "green", "blue", "yellow",
+    "blue", "blue", "blue", "yellow", "yellow"
+]
+
+# counter tool
 
 cnt = collections.Counter()
 
 for elem in listWithDuplicates:
-	cnt[elem] += 1
+    cnt[elem] += 1
 
 print(cnt)
