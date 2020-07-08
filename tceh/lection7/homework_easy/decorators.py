@@ -80,3 +80,41 @@ print(do_nothing.calls)
 do_nothing_2()
 print(do_nothing_2.calls)
 
+
+def logger(func):
+    print('Decorator is created')
+
+    def inner(*args, **kwargs):
+        print('function is started!')
+        print(func(*args, **kwargs))
+        print('function is executed')
+
+    return inner
+
+
+@logger
+def calculate_power(num, power):
+    return num ** power
+
+
+calculate_power(2, 2)
+
+
+def handle_exception(func):
+    def inner(*args, **kwargs):
+        try:
+            func(*args, **kwargs)
+        except Exception as e:
+            print(e)
+
+    return inner
+
+
+@handle_exception
+def division(a, b):
+    return a / b
+
+
+division(1, 2)
+division(1, 0)
+division(1, '0')
